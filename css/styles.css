@@ -356,6 +356,63 @@ transition: color .5s;
   color: #ECBDB3;
   padding: 2px 30px 2px;
 }/*Ends Links on all pages*/
+
+/*Starts Footer*/
+footer{
+  position: sticky; /* Fixes position relative to viewport */
+  top: 0%;
+  padding: 2%;
+  text-align: center;
+  background-color: #3D5985;
+}
+footer h1{
+  font-family: "Mrs Saint Delafield", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  font-size: 3em;
+  padding: 10px;
+}
+
+#footernav{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .9em;
+  padding-bottom: 15px;
+}
+#footernav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+#footernav .weddingpartylink{
+width: 60px;
+}
+
+#footernav a:link, #footernav a:active, #footernav a:visited{
+color: #fff;
+text-decoration: none;
+padding-right: 5%;
+transition: color .5s;
+}
+#footernav a:hover{
+  color: #ECEEE4;
+}/*ends Moblie Nav*/
+footer h6{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size:1em;
+  color: #fff;
+  border-top: 2px solid #ECBDB3;
+  padding-top: 10px;
+}
+/*ends Footer*/
 /*ENDS CSS for all pages*/
 
 
@@ -850,59 +907,221 @@ input[type="text"], textarea {
 
 
 
-/*Starts Footer*/
-footer{
-  position: sticky; /* Fixes position relative to viewport */
-  top: 0%;
-  padding: 2%;
-  text-align: center;
-  background-color: #3D5985;
+/*Starts Media Queries*/
+
+/*Start Mobile*/
+@media screen and (max-width: 320px) {
+  /*Shawn & Sarah Logo*/
+header h1{
+font-size: 2.5em;
 }
+/*Shawn & Sarah Logo*/ 
+/*Starts Moblie Nav*/
+#close-btn {
+  font-size: 3em;      /* Makes the X nice and big */
+}
+
+
+#mobile2 h1{
+  font-size: 2.5em;
+}
+#mobile2 li{
+  font-size: 2em;
+  line-height: 2em;
+}
+
+/*Starts Links on all pages*/
+.footerlinks{
+  margin: 5px 20px 10px;
+}
+
+.whoisbentley{
+  width: 100%;
+  height: 200px;
+}
+
+.whoisbentley h1{
+  margin-top: 50px;
+  font-size: 2em;
+  padding-bottom: 6px;
+}
+.whoisbentley h2{
+  font-size: 1em;
+  padding-bottom: 1%;
+}
+
+.whoisbentley h3{
+  font-size: 1em;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+
+.registry{
+   width: 100%;
+  height: 200px;
+}
+.registry h1{
+  margin-top: 35px;
+  font-size: 2em;
+  padding-bottom: 6px;
+}
+.registry h2{
+  font-size: 1em;
+  padding-bottom: 1%;
+}
+
+.registry h3{
+  font-size: 1em;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+
+.rsvp{
+  width: 100%;
+  height: 200px;
+}
+.rsvp h1{
+  margin-top: 35px;
+  font-size: 2em;
+  padding-bottom: 6px;
+}
+.rsvp h2{
+  font-size: 1em;
+  padding-bottom: 1%;
+}
+
+.rsvp h3{
+  font-size: 1em;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+
+.faq{
+  width: 100%;
+  height: 200px;
+}
+.faq h1{
+  margin-top: 35px;
+  font-size: 2em;
+  padding-bottom: 6px;
+}
+.faq h2{
+  font-size: 1em;
+  padding-bottom: 1%;
+}
+
+.faq h3{
+  font-size: 1em;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+
+/*Starts Footer*/
 footer h1{
-  font-family: "Mrs Saint Delafield", cursive;
-  font-weight: 400;
-  font-style: normal;
-  color: #fff;
-  font-size: 3em;
-  padding: 10px;
+  font-size: 2.5em;
+  padding: 5px;
 }
 
 #footernav{
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  font-size: .9em;
-  padding-bottom: 15px;
+  font-size: .6em;
+  padding-bottom: 10px;
 }
 #footernav ul{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 10px;
+  margin: 0px 3px;
 }
 
 #footernav .weddingpartylink{
 width: 60px;
 }
 
-#footernav a:link, #footernav a:active, #footernav a:visited{
-color: #fff;
-text-decoration: none;
-padding-right: 5%;
-transition: color .5s;
-}
-#footernav a:hover{
-  color: #ECEEE4;
-}/*ends Moblie Nav*/
 footer h6{
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  font size:1em;
-  color: #fff;
-  border-top: 2px solid #ECBDB3;
-  padding-top: 10px;
+  font-size:.8em;
 }
 /*ends Footer*/
+
+/*Starts Main Home page*/
+
+#Home_header{
+  height: 150px;
+  background-position: 0px -140px; /* Centers the image */
+}
+.Couple h1{
+  font-size: 1.6em;
+  padding-bottom: 5px;
+}
+
+.Couple p{
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+
+/* Countdown styles */
+ul#countdown {
+
+  li {
+
+    .number,
+    &.colon span {
+      font-size: clamp(.3rem, 6vw, 7.2rem);
+    }
+    &.colon {
+      margin-top: 5px;
+
+      span {
+        
+      }
+    }
+
+    .number {
+      padding: 0.5em;
+      margin-bottom: 5px;
+    }
+
+    .label {
+      font-size: clamp(1rem, 3vw, 1.8rem);
+    }
+  }
+}
+
+.timer-message {
+  font-size: 2em;
+  padding-top: 10px;
+}
+
+.requestbox h2{
+  font-size: 1.8em;
+  padding-bottom: 2%;
+}
+.requestbox h3{
+  font-size: .8em;
+  padding-bottom: 2%;
+}
+.requestbox h4{
+  font-size: .85em;
+  padding: 2%;
+}
+
+.requestbox form input {
+  font-size: 1em;
+}
+
+.requestbox button{
+  font-size: 1em;
+}
+/*Ends Main Home page*/
+/*Ends Mobile*/
+
+/*Start Tablet*/
+@media screen and (max-width: 768px) {
+  
+}
+/*Ends Tablet*/
+
+/*Starts Laptop*/
+@media screen and (max-width: 1024px) {
+  
+}/*Ends Laptop*/

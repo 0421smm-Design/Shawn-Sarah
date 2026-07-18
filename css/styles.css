@@ -910,7 +910,7 @@ input[type="text"], textarea {
 /*Starts Media Queries*/
 
 /*Start Mobile*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 120px) {
   /*Shawn & Sarah Logo*/
 header h1{
 font-size: 2.5em;

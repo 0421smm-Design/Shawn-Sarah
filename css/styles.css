@@ -905,7 +905,16 @@ input[type="text"], textarea {
 }
 /*Ends FAQ PAGE*/
 
+/*Starts Bentley Page*/
+#bentley_header{
+  height: 250px;
+  background-image: url(../img/WHOISBENTLY.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: 0px -100px; /* Centers the image */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
 
+/*ends Bentley Page*/
 
 
 /*Starts Media Queries*/

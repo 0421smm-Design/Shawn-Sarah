@@ -1,0 +1,878 @@
+/*#3D5985;
+#697A94;
+#B1A696;
+#DDD8C0;
+#ECEEE4;*/
+
+/*
+.vidaloka-regular {
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-<uniquifier> {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+mrs-saint-delafield-regular {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+/*STARTS CSS for all pages*/
+body{
+  background-color: #ECEEE4;
+}
+img{
+  width: 100%;
+}
+/*Shawn & Sarah Logo*/
+header h1{
+font-family: "Mrs Saint Delafield", cursive;
+font-weight: 400;
+font-style: normal;
+color: #fff;
+font-size: 3em;
+padding: 3% 2% 2%;
+}
+header a:link, header a:active, header a:visited{
+color: #fff;
+text-decoration: none;
+padding-right: 5%;
+transition: color .5s;
+}
+.Addpink{
+  color: #ECBDB3;
+}
+/*Shawn & Sarah Logo*/
+
+/*Starts Moblie Nav*/
+#button{
+  float: right;
+  color: #fff;
+  font-size: 1em;
+  padding: 3% 2% 0;/*pushes button inward on top and sides*/
+}
+
+#mobile2{
+  position: absolute; /* Fixes position relative to viewport */
+  width: 100%;     /* Spans full width */
+  height: 800px;
+  top: 0%;
+  bottom: 0%;
+  z-index: 2;   /* Ensures it stays above other content */
+  text-align: center;
+  display: none;
+  background-color: #3D5985;
+  padding-top: 0%;
+}
+#mobile2 h1{
+  margin-top: 20px;
+  font-size: 3.5em;
+}
+#mobile2 li{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 3em;
+  padding-left: 5%;
+}
+#mobile2 li:hover{
+  background-color: #B1A696;
+}
+#mobile2 a:link, #mobile2 a:active, #mobile2 a:visited{
+color: #fff;
+text-decoration: none;
+padding-right: 5%;
+transition: color .5s;
+}
+#mobile2 a:hover{
+  color: #ECEEE4;
+}/*ends Moblie Nav*/
+/*Starts Links on all pages*/
+.footerlinks{
+  margin: 5px 40px 10px;
+}
+
+.whoisbentley{
+  width: 100%;
+  height: 260px;
+  align-content: center;
+  margin-bottom: 20px;
+  background-image: url(../img/WHOISBENTLY.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center;
+  background-size: cover; /* Scales the image to cover the entire container */
+  border-radius: 15px;
+}
+.whoisbentley h1{
+  margin-top: 50px;
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 6px;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+.whoisbentley h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 1%;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+
+.whoisbentley h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+.whoisbentley a:link, .whoisbentley a:active, .whoisbentley a:visited{
+  color: #000;
+  padding: 2px 20px 2px;
+  text-decoration: none;
+  transition: .5s;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.whoisbentley a:hover{
+  color: #ECBDB3;
+  padding: 2px 30px 2px;
+}
+
+.registry{
+  width: 100%;
+  height: 260px;
+  align-content: center;
+  margin-bottom: 20px;
+  background-image: url(../img/Gift.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center;
+  background-size: cover; /* Scales the image to cover the entire container */
+  border-radius: 15px;
+}
+.registry h1{
+  margin-top: 50px;
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 6px;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+.registry h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 1%;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+
+.registry h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+.registry a:link, .registry a:active, .registry a:visited{
+  color: #000;
+  padding: 2px 20px 2px;
+  text-decoration: none;
+  transition: .5s;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.registry a:hover{
+  color: #ECBDB3;
+  padding: 2px 30px 2px;
+}
+
+.rsvp{
+  width: 100%;
+  height: 260px;
+  align-content: center;
+  margin-bottom: 20px;
+  background-image: url(../img/rsvp.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center;
+  background-size: cover; /* Scales the image to cover the entire container */
+  border-radius: 15px;
+}
+.rsvp h1{
+  margin-top: 50px;
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 6px;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+.rsvp h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 1%;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+
+.rsvp h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+.rsvp a:link, .rsvp a:active, .rsvp a:visited{
+  color: #000;
+  padding: 2px 20px 2px;
+  text-decoration: none;
+  transition: .5s;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.rsvp a:hover{
+  color: #ECBDB3;
+  padding: 2px 30px 2px;
+}
+
+.faq{
+  width: 100%;
+  height: 260px;
+  align-content: center;
+  margin-bottom: 20px;
+  background-image: url(../img/Barn.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: center;
+  background-size: cover; /* Scales the image to cover the entire container */
+  border-radius: 15px;
+}
+.faq h1{
+  margin-top: 50px;
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 6px;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+.faq h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 1%;
+  color: #fff;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* h-shadow, v-shadow, color */
+}
+
+.faq h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 1%;
+  padding: 2px;
+  margin: 10px 30px 30px;
+}
+.faq a:link, .faq a:active, .faq a:visited{
+  color: #000;
+  padding: 2px 20px 2px;
+  text-decoration: none;
+  transition: .5s;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.faq a:hover{
+  color: #ECBDB3;
+  padding: 2px 30px 2px;
+}/*Ends Links on all pages*/
+/*ENDS CSS for all pages*/
+
+
+
+/*Starts Main Home page*/
+#Home_header #mobile1 h1{
+text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+}
+
+#Home_header{
+  height: 250px;
+  background-image: url(../img/Shawn_&_Sarah_Home.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: 0px -200px; /* Centers the image */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
+.ShawnSarahhomepage{
+  max-width:900px;
+}
+.Couple{
+  padding: 2% 2% 2%;
+}
+.Couple h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.6em;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.Couple p{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 1.7em;
+  text-align: center;
+  line-height: 1.3em;
+  padding-bottom: 15px;
+}
+
+.Couple h3{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5em;
+  text-align: center;
+  color: #3D5985;
+}
+
+/*--#clock{
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  color: #ECBDB3;
+}
+.clock{
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 1.5em;
+  text-align: center;
+  word-spacing: 15px;
+  margin-left: 20px;
+}*/
+#clock *,
+#clock *:before,
+#clock *:after {
+  box-sizing: border-box;
+}
+
+#clock .main-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#clock.container {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  padding-inset: 20px;
+}
+
+/* Countdown styles */
+ul#countdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0;
+  color: #000;
+  overflow: hidden;
+  font-weight: bold;
+  line-height: 1.25;
+
+  li {
+    flex: 0 0 15%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .number,
+    &.colon span {
+      font-size: clamp(2rem, 6vw, 7.2rem);
+    }
+
+    .number {
+      padding: 0.3em;
+      margin-bottom: 5px;
+      display: block;
+      background-color: #ECBDB3;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    &.colon {
+      flex: 0 0 1%;
+      display: block;
+
+      span {
+        padding: 0.2em 0 0;
+        display: block;
+        color: #B1A696;
+      }
+    }
+
+    .label {
+      color: #000;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.timer-message {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2em;
+  text-align: center;
+  color: #DE8E7C;
+  padding-top: 10px;
+}
+
+.requestbox{
+  padding: 3%;
+  margin: 3%;
+  border-top: 2px solid #ECBDB3;
+  border-bottom: 2px solid #ECBDB3;
+}/* Countdown styles */
+
+.requestbox h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.9em;
+  text-align: center;
+  padding-bottom: 1%;
+}
+.requestbox h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.4em;
+  text-align: center;
+  padding-bottom: 2%;
+}
+.requestbox h4{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.293em;
+  text-align: center;
+  padding: 2%;
+}
+.requestbox input{
+  border: none;
+  background-color: #fff;
+  color: #B1A696;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5em;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1% 10% 1%;
+  margin-bottom: 3%;
+  display: block; /* Input elements are inline by default, change to block */
+  margin: 3% auto; /* Sets left and right margins to auto */
+}
+::placeholder{
+  color: #3D5985;
+}
+.requestbox form{
+  align-items: center;
+}
+
+.requestbox button{
+  color: #3D5985;
+  border: none;
+  background-color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5em;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1% 10% 1%;
+  display: block; /* Input elements are inline by default, change to block */
+  margin: 3% auto; /* Sets left and right margins to auto */
+}
+.requestbox button:hover{
+color: #ECBDB3;
+}
+.requestbox iframe{
+  display: block;
+margin: 0% auto;
+}
+/*Ends Main Home page*/
+
+/*Starts Registry Page*/
+#registry_header{
+  height: 250px;
+  background-image: url(../img/REG_HEAD.PNG);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
+.registry_text{
+  margin:  15px 40px;
+}
+.registry_text h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.6em;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.registry_text p{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.registry_links{
+  background-color: #fff;
+  margin: 10px 40px 30px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.registry_links img{
+  border-radius: 20px;
+}
+.registry_links h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 15px 0px 40px;
+}
+
+.registry_links h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.registry_links a:link, .registry_links a:active, .registry_links a:visited{
+  color: #fff;
+  padding: 10px 80px 10px;
+  text-decoration: none;
+  transition: .5s;
+  background-color: #000;
+  border-radius: 30px;
+}
+
+.registry_links a:hover{
+  color: #ECBDB3;
+  padding: 10px 110px 10px;
+}
+/*Ends Registry Page*/
+
+/*Starts RSVP PAGE*/
+#rsvp_header{
+  height: 250px;
+  background-image: url(../img/RSVP_HEADER.png);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
+#RSVP_PAGE h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.6em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+#RSVP_PAGE h2{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.3em;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.rsvp-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"], textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#RSVP_PAGE button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#RSVP_PAGE button:hover {
+  background-color: #34495e;
+}
+
+.radio-group {
+  text-align: left;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+/*Ends RSVP Page*/
+
+/*Starts FAQ PAGE*/
+#FAQ_header{
+  height: 250px;
+  background-image: url(../img/download.jpg);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
+#faq_page h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.6em;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.faq-item {
+  margin:  0px 40px 0px;
+  background-color: none;
+  border-bottom: 2px solid #ECBDB3;
+}
+
+.faq-question {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: #ECEEE4;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Pushes text left, icon right */
+  align-items: center;      /* Keeps icon centered vertically to the text */
+  border: none;
+  cursor: pointer;
+  gap: 20px;                /* Ensures text never touches the icon */
+}
+
+.faq-question p{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+/* The Plus/X Icon */
+.icon {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;           /* CRITICAL: Prevents icon from shrinking */
+  transition: transform 0.4s ease;
+}
+
+.line {
+  position: absolute;
+  background-color: #3D5985; /* Change icon color here */
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.horizontal {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vertical {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Animation: Plus to X */
+.faq-item.active .icon {
+  transform: rotate(45deg); /* Rotates the whole icon to make the X */
+}
+
+.faq-item.active .vertical {
+  /* This creates a cleaner X by aligning with the horizontal line */
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/* Smooth Slide Logic */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 1000px; /* Large enough to fit any answer */
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+.faq-answer p{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+  font-size: .8em;
+}
+/*Ends FAQ PAGE*/
+
+
+
+
+/*Starts Footer*/
+footer{
+  position: sticky; /* Fixes position relative to viewport */
+  top: 0%;
+  padding: 2%;
+  text-align: center;
+  background-color: #3D5985;
+}
+footer h1{
+  font-family: "Mrs Saint Delafield", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  font-size: 3em;
+  padding: 10px;
+}
+
+#footernav{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .9em;
+  padding-bottom: 15px;
+}
+#footernav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+#footernav .weddingpartylink{
+width: 60px;
+}
+
+#footernav a:link, #footernav a:active, #footernav a:visited{
+color: #fff;
+text-decoration: none;
+padding-right: 5%;
+transition: color .5s;
+}
+#footernav a:hover{
+  color: #ECEEE4;
+}/*ends Moblie Nav*/
+footer h6{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font size:1em;
+  color: #fff;
+  border-top: 2px solid #ECBDB3;
+  padding-top: 10px;
+}
+/*ends Footer*/

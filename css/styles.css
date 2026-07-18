@@ -58,10 +58,26 @@ transition: color .5s;
   padding: 3% 2% 0;/*pushes button inward on top and sides*/
 }
 
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 4em;      /* Makes the X nice and big */
+  color: #fff;         /* Matches your white text */
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+#close-btn:hover {
+  color: #ECEEE4;      /* Matches your other hover link color */
+}
+
 #mobile2{
-  position: absolute; /* Fixes position relative to viewport */
+  position: fixed; /* Fixes position relative to viewport */
   width: 100%;     /* Spans full width */
-  height: 800px;
+  height: 100%;
   top: 0%;
   bottom: 0%;
   z-index: 2;   /* Ensures it stays above other content */
@@ -70,8 +86,11 @@ transition: color .5s;
   background-color: #3D5985;
   padding-top: 0%;
 }
+
 #mobile2 h1{
+  text-align: left;
   margin-top: 20px;
+  margin-left:10px;
   font-size: 3.5em;
 }
 #mobile2 li{
@@ -82,6 +101,7 @@ transition: color .5s;
   font-size: 2em;
   line-height: 3em;
   padding-left: 5%;
+  margin-top: 10px;
 }
 #mobile2 li:hover{
   background-color: #B1A696;
@@ -95,6 +115,7 @@ transition: color .5s;
 #mobile2 a:hover{
   color: #ECEEE4;
 }/*ends Moblie Nav*/
+
 /*Starts Links on all pages*/
 .footerlinks{
   margin: 5px 40px 10px;
@@ -139,7 +160,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
   padding-bottom: 1%;
   padding: 2px;
@@ -198,7 +219,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
   padding-bottom: 1%;
   padding: 2px;
@@ -257,7 +278,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
   padding-bottom: 1%;
   padding: 2px;
@@ -316,7 +337,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
   padding-bottom: 1%;
   padding: 2px;
@@ -386,25 +407,7 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
   color: #3D5985;
 }
 
-/*--#clock{
-  text-align: center;
-  font-family: "Vidaloka", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3em;
-  color: #ECBDB3;
-}
-.clock{
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-size: 1.5em;
-  text-align: center;
-  word-spacing: 15px;
-  margin-left: 20px;
-}*/
+
 #clock *,
 #clock *:before,
 #clock *:after {
@@ -507,7 +510,7 @@ ul#countdown {
   font-style: normal;
   font-size: 2.9em;
   text-align: center;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
 }
 .requestbox h3{
   font-family: "Raleway", sans-serif;
@@ -527,8 +530,19 @@ ul#countdown {
   text-align: center;
   padding: 2%;
 }
-.requestbox input{
-  border: none;
+
+::placeholder{
+  color: #3D5985;
+}
+
+.requestbox form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.requestbox form input {
+  Border:none;
   background-color: #fff;
   color: #B1A696;
   font-family: "Raleway", sans-serif;
@@ -538,16 +552,8 @@ ul#countdown {
   font-size: 1.5em;
   border-radius: 20px;
   text-align: center;
-  padding: 1% 10% 1%;
-  margin-bottom: 3%;
   display: block; /* Input elements are inline by default, change to block */
-  margin: 3% auto; /* Sets left and right margins to auto */
-}
-::placeholder{
-  color: #3D5985;
-}
-.requestbox form{
-  align-items: center;
+  margin: 2% auto; /* Sets left and right margins to auto */
 }
 
 .requestbox button{
@@ -652,28 +658,28 @@ margin: 0% auto;
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
 }
-#RSVP_PAGE h1{
+.rsvpopening h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.6em;
+  font-size: 2em;
   text-align: center;
-  padding: 20px 0px;
+  padding: 2%;
 }
 
-#RSVP_PAGE h2{
+.rsvpopening h2{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .rsvp-container {
   max-width: 500px;
-  margin: 50px auto;
+  margin: 20px auto;
   padding: 30px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -682,12 +688,32 @@ margin: 0% auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.rsvp-container h2{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+
+
+
 input[type="text"], textarea {
   width: 90%;
   padding: 10px;
-  margin: 15px 0;
+  margin: 10px 0 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+#RSVP_PAGE label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
 }
 
 #RSVP_PAGE button {
@@ -706,7 +732,11 @@ input[type="text"], textarea {
 .radio-group {
   text-align: left;
   display: inline-block;
-  margin: 15px 0;
+  margin: 10px 0 15px;
+}
+
+#plus-one-group {
+  margin-bottom: 10px;
 }
 
 /*Ends RSVP Page*/

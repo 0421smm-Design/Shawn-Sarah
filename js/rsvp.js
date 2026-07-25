@@ -1,5 +1,6 @@
 let guestList = [];
 const sheetUrl = window.GUESTS_SHEET_URL || '';
+const fallbackGuestNames = ['Bob Price', 'Tina Lina', 'Shawn Miller'];
 
 function normalizeName(value) {
   return value.toLowerCase().trim();
@@ -50,6 +51,8 @@ function parseCsv(text) {
 }
 
 async function loadGuests() {
+  guestList = fallbackGuestNames.slice();
+
   try {
     if (sheetUrl) {
       const response = await fetch(sheetUrl, { mode: 'cors' });
@@ -70,10 +73,13 @@ async function loadGuests() {
     const fallbackResponse = await fetch('data/guests.json');
     if (!fallbackResponse.ok) throw new Error('Unable to load fallback guest data');
     const data = await fallbackResponse.json();
-    guestList = (data.guests || []).map(guest => guest.name);
+    const localNames = (data.guests || []).map(guest => guest.name).filter(Boolean);
+    if (localNames.length) {
+      guestList = localNames;
+    }
   } catch (error) {
     console.error('Guest data load failed:', error);
-    guestList = [];
+    guestList = fallbackGuestNames.slice();
   }
 }
 
@@ -112,7 +118,29 @@ const noRadio = document.getElementById("no");
 const plusOneGroup = document.getElementById("plus-one-group");
 const plusOneInput = document.getElementById("plus-one-name");
 const postUrl = (window.RSVP_POST_URL || '').trim();
+const recipientEmail = (window.RSVP_EMAIL_RECIPIENT || '').trim();
 const placeholderPostUrl = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+function buildMailtoLink(payload) {
+  const guestName = payload.guest_name || 'Unknown guest';
+  const attendance = payload.attendance || 'Not provided';
+  const plusOne = payload.plus_one || 'None';
+  const allergies = payload.allergies || 'None';
+  const subject = encodeURIComponent(`Wedding RSVP Update - ${guestName}`);
+  const bodyLines = [
+    `Hello Shawn and Sarah,`,
+    '',
+    `You received a new RSVP from ${guestName}.`,
+    '',
+    `Attendance: ${attendance}`,
+    `Plus one: ${plusOne}`,
+    `Dietary notes / allergies: ${allergies}`,
+    '',
+    `Thanks!`
+  ];
+  const body = encodeURIComponent(bodyLines.join('\n'));
+  return `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+}
 
 function togglePlusOneField() {
   if (yesRadio.checked) {
@@ -128,41 +156,25 @@ if (yesRadio && noRadio) {
   noRadio.addEventListener("change", togglePlusOneField);
 }
 
-async function handleSubmit(event) {
+function handleSubmit(event) {
   event.preventDefault();
   const status = document.getElementById("status");
   const data = new FormData(event.target);
   const payload = Object.fromEntries(data.entries());
 
-  if (!postUrl || postUrl === placeholderPostUrl) {
-    status.innerHTML = "RSVP posting URL is not configured yet. Replace the placeholder in rsvp.html with your Google Apps Script web app URL.";
-    return;
+  if (recipientEmail && recipientEmail !== 'YOUR_EMAIL@example.com') {
+    window.location.href = buildMailtoLink(payload);
+    status.innerHTML = "Your email app should open with the RSVP details. Please send it to finish the submission.";
+  } else {
+    status.innerHTML = "Your RSVP was received locally. Please add your email address in the RSVP settings to send it by email.";
   }
 
-  try {
-    const response = await fetch(postUrl, {
-      method: "POST",
-      body: JSON.stringify(payload),
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      status.innerHTML = "Thanks for your RSVP! We’ve saved your response.";
-      form.reset();
-      form.style.display = "none";
-      document.getElementById('search-section').style.display = 'block';
-      document.getElementById('guest-search').value = '';
-      document.getElementById('error-msg').style.display = 'none';
-      plusOneGroup.style.display = 'none';
-    } else {
-      status.innerHTML = `Submission failed. Status: ${response.status} ${response.statusText}`;
-    }
-  } catch (error) {
-    status.innerHTML = `Submission failed: ${error.message}`;
-  }
+  form.reset();
+  form.style.display = "none";
+  document.getElementById('search-section').style.display = 'block';
+  document.getElementById('guest-search').value = '';
+  document.getElementById('error-msg').style.display = 'none';
+  plusOneGroup.style.display = 'none';
 }
 
 form.addEventListener("submit", handleSubmit);

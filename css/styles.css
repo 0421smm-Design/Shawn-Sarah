@@ -628,6 +628,98 @@ margin: 0px auto;
 }
 /*Ends Main Home page*/
 
+/*Starts Wedding Party Page*/
+.weddingparty{
+  margin:  15px 20px;
+}
+.weddingparty h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.3em;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.weddingparty p{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .8em;
+  text-align: center;
+}
+.Bridesmaids{
+  Padding: 10px;
+}
+.Bridesmaids h2{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.Bridesmaids img{
+  border-radius: 20px;
+  margin: 10px 0px;
+}
+.Bridesmaids p{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .7em;
+  text-align: center;
+}
+.Bridesmaids h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.Groomsmen{
+  Padding: 10px;
+}
+.Groomsmen h2{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.Groomsmen img{
+  border-radius: 20px;
+  margin: 10px 0px;
+}
+.Groomsmen p{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .7em;
+  text-align: center;
+}
+.Groomsmen h3{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/*ends wedding party page*/
+
+/*Starts schedule Page*/
+
+/*ends schedule page*/
+
 /*Starts Registry Page*/
 #registry_header{
   height: 160px;
@@ -698,6 +790,10 @@ margin: 0px auto;
   padding: 10px 110px 10px;
 }
 /*Ends Registry Page*/
+
+/*Starts Photos Page*/
+
+/*ends photos page*/
 
 /*Starts RSVP PAGE*/
 #rsvp_header{

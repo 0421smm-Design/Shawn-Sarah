@@ -143,16 +143,13 @@ async function checkGuest() {
     currentGuest = foundGuest;
     document.getElementById('search-section').style.display = 'none';
     rsvpForm.style.display = 'block';
+    rsvpForm.reset();
     welcomeName.innerText = `Hi, ${foundGuest.name}!`;
     hiddenName.value = foundGuest.name;
     errorMsg.style.display = 'none';
     plusOneGroup.style.display = 'none';
     plusOneInput.value = '';
     emailInput.value = foundGuest.email || '';
-    rsvpForm.reset();
-    if (emailInput.value) {
-      emailInput.value = foundGuest.email;
-    }
   } else {
     errorMsg.style.display = 'block';
   }
@@ -218,23 +215,60 @@ async function handleSubmit(event) {
       recipient_email: recipientEmail
     };
 
-    if (postUrl) {
-      const response = await fetch(postUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(submissionPayload)
-      });
+    let success = false;
+    let lastError = null;
 
-      if (!response.ok) {
-        throw new Error(`Request failed with status ${response.status}`);
+    if (postUrl) {
+      try {
+        const response = await fetch(postUrl, {
+          method: 'POST',
+          mode: 'cors',
+          body: new URLSearchParams(submissionPayload)
+        });
+
+        if (response.type === 'opaque') {
+          success = true;
+        } else {
+          const responseBody = await response.text();
+          let responseJson = null;
+
+          try {
+            responseJson = responseBody ? JSON.parse(responseBody) : null;
+          } catch (jsonError) {
+            throw new Error(`Unexpected response from server: ${responseBody}`);
+          }
+
+          if (!response.ok || (responseJson && responseJson.ok === false)) {
+            const serverMessage = responseJson && responseJson.error ? responseJson.error : response.statusText;
+            throw new Error(serverMessage || `Request failed with status ${response.status}`);
+          }
+
+          success = true;
+        }
+      } catch (initialError) {
+        lastError = initialError;
+        try {
+          await fetch(postUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new URLSearchParams(submissionPayload)
+          });
+          success = true;
+        } catch (noCorsError) {
+          lastError = noCorsError;
+        }
       }
+    }
+
+    if (!success) {
+      throw lastError || new Error('RSVP submission failed.');
     }
 
     showStatus(`Thanks, ${guestName}! Your RSVP has been received and sent to Shawn and Sarah.`, false);
     showSuccessModal(`Thanks, ${guestName}! We’ve received your RSVP and will be in touch soon.`);
   } catch (error) {
     console.error('RSVP submission failed:', error);
-    showStatus('Your RSVP could not be sent automatically right now. Please try again shortly.', true);
+    showStatus(`Your RSVP could not be sent automatically right now. ${error && error.message ? error.message : ''}`, true);
   }
 
   form.reset();

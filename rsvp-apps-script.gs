@@ -1,14 +1,24 @@
 function doGet() {
   return ContentService
-    .createTextOutput('RSVP endpoint is ready.')
-    .setMimeType(ContentService.MimeType.TEXT);
+    .createTextOutput(JSON.stringify({ ok: true, message: 'RSVP endpoint is ready.' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function parsePayload(e) {
+  if (e && e.postData && e.postData.contents) {
+    try {
+      return JSON.parse(e.postData.contents);
+    } catch (error) {
+      // Not JSON, fall back to form parameters.
+    }
+  }
+
+  return (e && e.parameter) ? Object.assign({}, e.parameter) : {};
 }
 
 function doPost(e) {
   try {
-    const payload = e && e.postData && e.postData.contents
-      ? JSON.parse(e.postData.contents)
-      : {};
+    const payload = parsePayload(e);
 
     const guestName = payload.guest_name || 'Unknown guest';
     const attendance = payload.attendance || 'Not provided';

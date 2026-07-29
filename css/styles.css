@@ -41,7 +41,7 @@ font-family: "Mrs Saint Delafield", cursive;
 font-weight: 400;
 font-style: normal;
 color: #fff;
-font-size: 3em;
+font-size: 2.5em;
 padding: 15px 10px 10px;
 }
 header a:link, header a:active, header a:visited{
@@ -64,9 +64,9 @@ transition: color .5s;
 
 #close-btn {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 10px;
-  font-size: 4em;      /* Makes the X nice and big */
+  font-size: 3em;      /* Makes the X nice and big */
   color: #fff;         /* Matches your white text */
   text-decoration: none;
   cursor: pointer;
@@ -93,9 +93,9 @@ transition: color .5s;
 
 #mobile2 h1{
   text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left:10px;
-  font-size: 3.5em;
+  font-size: 2.5em;
 }
 #mobile2 li{
   font-family: "Raleway", sans-serif;
@@ -120,12 +120,12 @@ transition: color .5s;
 
 /*Starts Links on all pages*/
 .footerlinks{
-  margin: 5px 40px 10px;
+  margin: 5px 20px 10px;
 }
 
 .whoisbentley{
   width: 100%;
-  height: 260px;
+  height: 200px;
   align-content: center;
   margin-bottom: 20px;
   background-image: url(../img/WHOISBENTLY.png);
@@ -139,7 +139,7 @@ transition: color .5s;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
   padding-bottom: 6px;
   color: #fff;
@@ -150,7 +150,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   color: #fff;
@@ -162,7 +162,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 15px;
   padding: 2px;
@@ -184,7 +184,7 @@ transition: color .5s;
 
 .registry{
   width: 100%;
-  height: 260px;
+  height: 200px;
   align-content: center;
   margin-bottom: 20px;
   background-image: url(../img/Gift.png);
@@ -194,11 +194,11 @@ transition: color .5s;
   border-radius: 15px;
 }
 .registry h1{
-  margin-top: 50px;
+  margin-top: 35px;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
   padding-bottom: 6px;
   color: #fff;
@@ -209,7 +209,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   color: #fff;
@@ -221,7 +221,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   padding: 2px;
@@ -243,7 +243,7 @@ transition: color .5s;
 
 .rsvp{
   width: 100%;
-  height: 260px;
+  height: 200px;
   align-content: center;
   margin-bottom: 20px;
   background-image: url(../img/rsvp.png);
@@ -257,7 +257,7 @@ transition: color .5s;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
   padding-bottom: 6px;
   color: #fff;
@@ -268,7 +268,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   color: #fff;
@@ -280,7 +280,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   padding: 2px;
@@ -302,7 +302,7 @@ transition: color .5s;
 
 .faq{
   width: 100%;
-  height: 260px;
+  height: 200px;
   align-content: center;
   margin-bottom: 20px;
   background-image: url(../img/Barn.png);
@@ -312,11 +312,11 @@ transition: color .5s;
   border-radius: 15px;
 }
 .faq h1{
-  margin-top: 50px;
+  margin-top: 40px;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
   padding: 5px;
   color: #fff;
@@ -327,7 +327,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   color: #fff;
@@ -339,7 +339,7 @@ transition: color .5s;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   padding-bottom: 5px;
   padding: 2px;
@@ -381,18 +381,18 @@ footer h1{
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .9em;
+  font-size: .6em;
   padding-bottom: 15px;
 }
 #footernav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 
 #footernav .weddingpartylink{
-width: 60px;
+width: 40px;
 }
 
 #footernav a:link, #footernav a:active, #footernav a:visited{
@@ -408,7 +408,7 @@ footer h6{
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size:1em;
+  font-size:.8em;
   color: #fff;
   border-top: 2px solid #ECBDB3;
   padding-top: 10px;
@@ -424,10 +424,10 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
 }
 
 #Home_header{
-  height: 250px;
+  height: 160px;
   background-image: url(../img/Shawn_&_Sarah_Home.png);
   background-repeat: no-repeat; /* Prevents the image from tiling */
-  background-position: 0px -200px; /* Centers the image */
+  background-position: 0px -130px; /* Centers the image */
   background-size: cover; /* Scales the image to cover the entire container */
 }
 .ShawnSarahhomepage{
@@ -440,7 +440,7 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.6em;
+  font-size: 1.6em;
   text-align: center;
   padding-bottom: 5px;
 }
@@ -450,21 +450,11 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-  font-size: 1.7em;
+  font-size: .9em;
   text-align: center;
   line-height: 1.3em;
   padding-bottom: 15px;
 }
-
-.Couple h3{
-  font-family: "Vidaloka", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3.5em;
-  text-align: center;
-  color: #3D5985;
-}
-
 
 #clock *,
 #clock *:before,
@@ -484,7 +474,7 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
   width: 100%;
   max-width: 960px;
   margin: auto;
-  padding-inset: 20px;
+  padding: 20px;
 }
 
 /* Countdown styles */
@@ -511,7 +501,7 @@ ul#countdown {
 
     .number,
     &.colon span {
-      font-size: clamp(2rem, 6vw, 7.2rem);
+      font-size: clamp(1.5rem, 2vw, 2rem);
     }
 
     .number {
@@ -536,7 +526,7 @@ ul#countdown {
 
     .label {
       color: #000;
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-size: clamp(1rem, 3vw, 1.8rem);
       text-transform: uppercase;
     }
   }
@@ -556,7 +546,7 @@ ul#countdown {
 
 .requestbox{
   padding: 10px;
-  margin: 10px;
+  margin: 0px 10px 10px;
   border-top: 2px solid #ECBDB3;
   border-bottom: 2px solid #ECBDB3;
 }/* Countdown styles */
@@ -566,7 +556,7 @@ ul#countdown {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 2.9em;
+  font-size: 1.9em;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -575,7 +565,7 @@ ul#countdown {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.4em;
+  font-size: .9em;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -584,7 +574,7 @@ ul#countdown {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.293em;
+  font-size: .8em;
   text-align: center;
   padding: 10px;
 }
@@ -607,11 +597,11 @@ ul#countdown {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1em;
   border-radius: 20px;
   text-align: center;
   display: block; /* Input elements are inline by default, change to block */
-  margin: 10px auto; /* Sets left and right margins to auto */
+  margin: 5px auto; /* Sets left and right margins to auto */
 }
 
 .requestbox button{
@@ -622,12 +612,12 @@ ul#countdown {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1em;
   border-radius: 20px;
   text-align: center;
   padding: 10px 30px 10px;
   display: block; /* Input elements are inline by default, change to block */
-  margin: 10px auto; /* Sets left and right margins to auto */
+  margin: 5px auto; /* Sets left and right margins to auto */
 }
 .requestbox button:hover{
 color: #ECBDB3;
@@ -640,19 +630,19 @@ margin: 0px auto;
 
 /*Starts Registry Page*/
 #registry_header{
-  height: 250px;
+  height: 160px;
   background-image: url(../img/REG_HEAD.PNG);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
 }
 .registry_text{
-  margin:  15px 40px;
+  margin:  15px 20px;
 }
 .registry_text h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.6em;
+  font-size: 2.3em;
   text-align: center;
   padding-bottom: 15px;
 }
@@ -661,14 +651,14 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: .8em;
   text-align: center;
   line-height: 1.3em;
 }
 
 .registry_links{
   background-color: #fff;
-  margin: 10px 40px 30px;
+  margin: 10px 20px 30px;
   padding: 15px;
   border-radius: 20px;
 }
@@ -680,7 +670,7 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
   padding: 15px 0px 40px;
 }
@@ -690,7 +680,7 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: .9em;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -711,7 +701,7 @@ margin: 0px auto;
 
 /*Starts RSVP PAGE*/
 #rsvp_header{
-  height: 250px;
+  height: 160px;
   background-image: url(../img/RSVP_HEADER.png);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
@@ -720,9 +710,9 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: center;
-  padding: 10px;;
+  padding: 10px 10px 0px;
 }
 
 .rsvpopening h2{
@@ -730,15 +720,15 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: .8em;
   text-align: center;
   padding-top: 10px;
 }
 
 .rsvp-container {
   max-width: 500px;
-  margin: 20px auto;
-  padding: 30px;
+  margin: 20px 20px;
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-family: sans-serif;
@@ -750,12 +740,18 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
   padding-bottom: 10px;
 }
-
-
+.rsvp-container p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .8em;
+  text-align: center;
+}
 
 
 input[type="text"], textarea {
@@ -847,22 +843,22 @@ input[type="text"], textarea {
 
 /*Starts FAQ PAGE*/
 #FAQ_header{
-  height: 250px;
+  height: 160px;
   background-image: url(../img/download.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
 }
-#faq_page h1{
+.faq_header h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.6em;
+  font-size: 2em;
   text-align: center;
   padding: 20px 0px;
 }
 
 .faq-item {
-  margin:  0px 40px 0px;
+  margin:  0px 20px 0px;
   background-color: none;
   border-bottom: 2px solid #ECBDB3;
 }
@@ -884,7 +880,7 @@ input[type="text"], textarea {
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: left;
 }
 
@@ -942,21 +938,25 @@ input[type="text"], textarea {
 }
 
 .faq-answer p{
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 10px;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
   text-align: left;
-  font-size: .8em;
+  font-size: .7em;
+  line-height: 1.3em;
 }
 /*Ends FAQ PAGE*/
 
 /*Starts Bentley Page*/
 #bentley_header{
-  height: 250px;
+  height: 160px;
   background-image: url(../img/WHOISBENTLY.png);
   background-repeat: no-repeat; /* Prevents the image from tiling */
-  background-position: 0px -100px; /* Centers the image */
+  background-position: 0px 0px; /* Centers the image */
   background-size: cover; /* Scales the image to cover the entire container */
 }
 
@@ -965,213 +965,12 @@ input[type="text"], textarea {
 
 /*Starts Media Queries*/
 
-/*Start Mobile*/
+/*Start Mobile Medium*/
 @media screen and (max-width: 375px) {
-  /*Shawn & Sarah Logo*/
-header h1{
-font-size: 2.5em;
-}
-/*Shawn & Sarah Logo*/ 
-/*Starts Moblie Nav*/
-#close-btn {
-  font-size: 3em;      /* Makes the X nice and big */
-}
+ 
 
 
-#mobile2 h1{
-  font-size: 2.5em;
-}
-#mobile2 li{
-  font-size: 2em;
-  line-height: 2em;
-}
-
-/*Starts Links on all pages*/
-.footerlinks{
-  margin: 5px 20px 10px;
-}
-
-.whoisbentley{
-  width: 100%;
-  height: 200px;
-}
-
-.whoisbentley h1{
-  margin-top: 50px;
-  font-size: 2em;
-  padding-bottom: 6px;
-}
-.whoisbentley h2{
-  font-size: 1em;
-  padding-bottom: 10px;
-}
-
-.whoisbentley h3{
-  font-size: 1em;
-  padding-bottom: 10px;
-  padding: 2px;
-  margin: 10px 30px 30px;
-}
-
-.registry{
-   width: 100%;
-  height: 200px;
-}
-.registry h1{
-  margin-top: 35px;
-  font-size: 2em;
-  padding-bottom: 6px;
-}
-.registry h2{
-  font-size: 1em;
-  padding-bottom: 10px;
-}
-
-.registry h3{
-  font-size: 1em;
-  padding-bottom: 10px;
-  padding: 2px;
-  margin: 10px 30px 30px;
-}
-
-.rsvp{
-  width: 100%;
-  height: 200px;
-}
-.rsvp h1{
-  margin-top: 35px;
-  font-size: 2em;
-  padding-bottom: 6px;
-}
-.rsvp h2{
-  font-size: 1em;
-  padding-bottom: 10px;
-}
-
-.rsvp h3{
-  font-size: 1em;
-  padding-bottom: 10px;
-  padding: 2px;
-  margin: 10px 30px 30px;
-}
-
-.faq{
-  width: 100%;
-  height: 200px;
-}
-.faq h1{
-  margin-top: 35px;
-  font-size: 2em;
-  padding-bottom: 6px;
-}
-.faq h2{
-  font-size: 1em;
-  padding-bottom: 10px;
-}
-
-.faq h3{
-  font-size: 1em;
-  padding-bottom: 10px;
-  padding: 2px;
-  margin: 10px 30px 30px;
-}
-
-/*Starts Footer*/
-footer h1{
-  font-size: 2.5em;
-  padding: 5px;
-}
-
-#footernav{
-  font-size: .6em;
-  padding-bottom: 10px;
-}
-#footernav ul{
-  margin: 0px 3px;
-}
-
-#footernav .weddingpartylink{
-width: 60px;
-}
-
-footer h6{
-  font-size:.8em;
-}
-/*ends Footer*/
-
-/*Starts Main Home page*/
-
-#Home_header{
-  height: 160px;
-  background-position: 0px -160px; /* Centers the image */
-}
-.Couple h1{
-  font-size: 1.7em;
-  padding-bottom: 5px;
-}
-
-.Couple p{
-  font-size: 1em;
-  padding-bottom: 20px;
-  white-space: pre-line;
-}
-
-/* Countdown styles */
-ul#countdown {
-
-  li {
-
-    .number,
-    &.colon span {
-      font-size: clamp(.3rem, 6vw, 7.2rem);
-    }
-    &.colon {
-      margin-top: 5px;
-
-      span {
-        
-      }
-    }
-
-    .number {
-      padding: 0.5em;
-      margin-bottom: 5px;
-    }
-
-    .label {
-      font-size: clamp(1rem, 3vw, 1.8rem);
-    }
-  }
-}
-
-.timer-message {
-  font-size: 2em;
-  padding-top: 10px;
-}
-
-.requestbox h2{
-  font-size: 1.8em;
-  padding-bottom: 10px;
-}
-.requestbox h3{
-  font-size: .8em;
-  padding-bottom: 10px;
-}
-.requestbox h4{
-  font-size: .85em;
-  padding: 10px;
-}
-
-.requestbox form input {
-  font-size: 1em;
-}
-
-.requestbox button{
-  font-size: 1em;
-}/*Ends Main Home page*/
-
-
-}/*Ends Mobile*/
+}/*Ends Mobile Medium*/
 
 /*Start Tablet*/
 @media screen and (max-width: 768px) {

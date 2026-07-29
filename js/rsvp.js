@@ -1,7 +1,9 @@
 let guestList = [];
 let currentGuest = null;
 const sheetUrl = window.GUESTS_SHEET_URL || '';
-const fallbackGuestNames = ['Bob Price', 'Tina Lina', 'Shawn Miller'];
+const fallbackGuestNames = [
+  'Bob Price', 'Tina Lina', 'Shawn Miller'
+];
 const postUrl = (window.RSVP_POST_URL || '').trim();
 const recipientEmail = (window.RSVP_EMAIL_RECIPIENT || '').trim();
 

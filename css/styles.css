@@ -797,6 +797,52 @@ input[type="text"], textarea {
   margin-bottom: 10px;
 }
 
+.rsvp-success-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.rsvp-success-modal.is-open {
+  display: flex;
+}
+
+.rsvp-success-modal__content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.rsvp-success-modal__content h3 {
+  font-family: "Vidaloka", serif;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.rsvp-success-modal__content p {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.rsvp-success-modal__content button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /*Ends RSVP Page*/
 
 /*Starts FAQ PAGE*/

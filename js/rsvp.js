@@ -1,9 +1,28 @@
 let guestList = [];
+let currentGuest = null;
 const sheetUrl = window.GUESTS_SHEET_URL || '';
 const fallbackGuestNames = ['Bob Price', 'Tina Lina', 'Shawn Miller'];
+const postUrl = (window.RSVP_POST_URL || '').trim();
+const recipientEmail = (window.RSVP_EMAIL_RECIPIENT || '').trim();
 
 function normalizeName(value) {
-  return value.toLowerCase().trim();
+  return (value || '').toLowerCase().trim();
+}
+
+function createGuestEntry(value) {
+  if (typeof value === 'string') {
+    return { name: value.trim() };
+  }
+
+  if (value && typeof value === 'object') {
+    return {
+      name: (value.name || value.guest_name || '').trim(),
+      email: (value.email || value.guest_email || '').trim(),
+      plusOneAllowed: value.plusOneAllowed !== false
+    };
+  }
+
+  return null;
 }
 
 function parseCsv(text) {
@@ -51,7 +70,12 @@ function parseCsv(text) {
 }
 
 async function loadGuests() {
-  guestList = fallbackGuestNames.slice();
+  guestList = fallbackGuestNames.map(createGuestEntry).filter(Boolean);
+
+  if (Array.isArray(window.GUESTS_DATA) && window.GUESTS_DATA.length) {
+    guestList = window.GUESTS_DATA.map(createGuestEntry).filter(Boolean);
+    return;
+  }
 
   try {
     if (sheetUrl) {
@@ -65,22 +89,36 @@ async function loadGuests() {
         .filter(name => !name.toLowerCase().includes('name'));
 
       if (names.length) {
-        guestList = names;
+        guestList = names.map(name => ({ name }));
         return;
       }
     }
-
-    const fallbackResponse = await fetch('data/guests.json');
-    if (!fallbackResponse.ok) throw new Error('Unable to load fallback guest data');
-    const data = await fallbackResponse.json();
-    const localNames = (data.guests || []).map(guest => guest.name).filter(Boolean);
-    if (localNames.length) {
-      guestList = localNames;
-    }
   } catch (error) {
     console.error('Guest data load failed:', error);
-    guestList = fallbackGuestNames.slice();
   }
+}
+
+function showStatus(message, isError) {
+  const status = document.getElementById('status');
+  if (!status) return;
+  status.innerHTML = message;
+  status.style.color = isError ? '#b22222' : '#2d6a4f';
+}
+
+function showSuccessModal(message) {
+  const modal = document.getElementById('rsvp-success-modal');
+  const modalMessage = document.getElementById('rsvp-success-message');
+  if (!modal || !modalMessage) return;
+  modalMessage.innerText = message;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function hideSuccessModal() {
+  const modal = document.getElementById('rsvp-success-modal');
+  if (!modal) return;
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
 }
 
 async function checkGuest() {
@@ -95,55 +133,60 @@ async function checkGuest() {
   const hiddenName = document.getElementById('hidden-name');
   const plusOneGroup = document.getElementById('plus-one-group');
   const plusOneInput = document.getElementById('plus-one-name');
+  const emailInput = document.getElementById('guest-email');
 
-  const found = guestList.find(name => normalizeName(name).includes(normalizeName(input)));
+  const foundGuest = guestList.find(guest => normalizeName(guest.name).includes(normalizeName(input)));
 
-  if (found) {
+  if (foundGuest) {
+    currentGuest = foundGuest;
     document.getElementById('search-section').style.display = 'none';
     rsvpForm.style.display = 'block';
-    welcomeName.innerText = "Hi, " + found + "!";
-    hiddenName.value = found;
+    welcomeName.innerText = `Hi, ${foundGuest.name}!`;
+    hiddenName.value = foundGuest.name;
     errorMsg.style.display = 'none';
     plusOneGroup.style.display = 'none';
     plusOneInput.value = '';
+    emailInput.value = foundGuest.email || '';
     rsvpForm.reset();
+    if (emailInput.value) {
+      emailInput.value = foundGuest.email;
+    }
   } else {
     errorMsg.style.display = 'block';
   }
 }
 
-const form = document.getElementById("rsvp-form");
-const yesRadio = document.getElementById("yes");
-const noRadio = document.getElementById("no");
-const plusOneGroup = document.getElementById("plus-one-group");
-const plusOneInput = document.getElementById("plus-one-name");
-const postUrl = (window.RSVP_POST_URL || '').trim();
-const recipientEmail = (window.RSVP_EMAIL_RECIPIENT || '').trim();
-const placeholderPostUrl = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+const form = document.getElementById('rsvp-form');
+const yesRadio = document.getElementById('yes');
+const noRadio = document.getElementById('no');
+const plusOneGroup = document.getElementById('plus-one-group');
+const plusOneInput = document.getElementById('plus-one-name');
 
 function buildMailtoLink(payload) {
   const guestName = payload.guest_name || 'Unknown guest';
   const attendance = payload.attendance || 'Not provided';
   const plusOne = payload.plus_one || 'None';
   const allergies = payload.allergies || 'None';
+  const email = payload.guest_email || 'Not provided';
   const subject = encodeURIComponent(`Wedding RSVP Update - ${guestName}`);
   const bodyLines = [
-    `Hello Shawn and Sarah,`,
+    'Hello Shawn and Sarah,',
     '',
     `You received a new RSVP from ${guestName}.`,
     '',
     `Attendance: ${attendance}`,
+    `Email: ${email}`,
     `Plus one: ${plusOne}`,
     `Dietary notes / allergies: ${allergies}`,
     '',
-    `Thanks!`
+    'Thanks!'
   ];
   const body = encodeURIComponent(bodyLines.join('\n'));
   return `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
 }
 
 function togglePlusOneField() {
-  if (yesRadio.checked) {
+  if (yesRadio && yesRadio.checked) {
     plusOneGroup.style.display = 'block';
   } else {
     plusOneGroup.style.display = 'none';
@@ -152,30 +195,69 @@ function togglePlusOneField() {
 }
 
 if (yesRadio && noRadio) {
-  yesRadio.addEventListener("change", togglePlusOneField);
-  noRadio.addEventListener("change", togglePlusOneField);
+  yesRadio.addEventListener('change', togglePlusOneField);
+  noRadio.addEventListener('change', togglePlusOneField);
 }
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault();
-  const status = document.getElementById("status");
   const data = new FormData(event.target);
   const payload = Object.fromEntries(data.entries());
+  const guestName = payload.guest_name || 'Unknown guest';
 
-  if (recipientEmail && recipientEmail !== 'YOUR_EMAIL@example.com') {
-    window.location.href = buildMailtoLink(payload);
-    status.innerHTML = "Your email app should open with the RSVP details. Please send it to finish the submission.";
-  } else {
-    status.innerHTML = "Your RSVP was received locally. Please add your email address in the RSVP settings to send it by email.";
+  if (!payload.guest_name) {
+    showStatus('Please find your name before submitting your RSVP.', true);
+    return;
+  }
+
+  try {
+    const submissionPayload = {
+      ...payload,
+      recipient_email: recipientEmail
+    };
+
+    if (postUrl) {
+      const response = await fetch(postUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(submissionPayload)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+    }
+
+    showStatus(`Thanks, ${guestName}! Your RSVP has been received and sent to Shawn and Sarah.`, false);
+    showSuccessModal(`Thanks, ${guestName}! We’ve received your RSVP and will be in touch soon.`);
+  } catch (error) {
+    console.error('RSVP submission failed:', error);
+    showStatus('Your RSVP could not be sent automatically right now. Please try again shortly.', true);
   }
 
   form.reset();
-  form.style.display = "none";
+  form.style.display = 'none';
   document.getElementById('search-section').style.display = 'block';
   document.getElementById('guest-search').value = '';
   document.getElementById('error-msg').style.display = 'none';
   plusOneGroup.style.display = 'none';
+  currentGuest = null;
 }
 
-form.addEventListener("submit", handleSubmit);
+if (form) {
+  form.addEventListener('submit', handleSubmit);
+}
+
+const closeModalButton = document.getElementById('rsvp-close-modal');
+if (closeModalButton) {
+  closeModalButton.addEventListener('click', hideSuccessModal);
+}
+
+document.getElementById('guest-search').addEventListener('keydown', event => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    checkGuest();
+  }
+});
+
 loadGuests();

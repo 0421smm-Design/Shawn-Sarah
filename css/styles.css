@@ -128,7 +128,7 @@ transition: color .5s;
   height: 200px;
   align-content: center;
   margin-bottom: 20px;
-  background-image: url(../img/WHOISBENTLY.png);
+  background-image: url(../img/WHOISBENTLY.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: center;
   background-size: cover; /* Scales the image to cover the entire container */
@@ -187,7 +187,7 @@ transition: color .5s;
   height: 200px;
   align-content: center;
   margin-bottom: 20px;
-  background-image: url(../img/Gift.png);
+  background-image: url(../img/Gift.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: center;
   background-size: cover; /* Scales the image to cover the entire container */
@@ -246,7 +246,7 @@ transition: color .5s;
   height: 200px;
   align-content: center;
   margin-bottom: 20px;
-  background-image: url(../img/rsvp.png);
+  background-image: url(../img/rsvp.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: center;
   background-size: cover; /* Scales the image to cover the entire container */
@@ -305,7 +305,7 @@ transition: color .5s;
   height: 200px;
   align-content: center;
   margin-bottom: 20px;
-  background-image: url(../img/Barn.png);
+  background-image: url(../img/Barn.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: center;
   background-size: cover; /* Scales the image to cover the entire container */
@@ -425,7 +425,7 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
 
 #Home_header{
   height: 160px;
-  background-image: url(../img/Shawn_&_Sarah_Home.png);
+  background-image: url(../img/Shawn_&_Sarah_Home.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: 0px -130px; /* Centers the image */
   background-size: cover; /* Scales the image to cover the entire container */
@@ -629,23 +629,35 @@ margin: 0px auto;
 /*Ends Main Home page*/
 
 /*Starts Wedding Party Page*/
+#wedding_header{
+  height: 160px;
+  background-image: url(../img/Weddingpartyheader.jpg);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: 0px -20px; /* Centers the image */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
+
+#wedding_header #mobile1 h1{
+text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+}
+
 .weddingparty{
-  margin:  15px 20px;
+  margin:  10px 20px;
 }
 .weddingparty h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.3em;
+  font-size: 2.7em;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 .weddingparty p{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .8em;
+  font-size: 1.2em;
   text-align: center;
 }
 .Bridesmaids{
@@ -655,20 +667,22 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.8em;
+  font-size: 2.3em;
   text-align: center;
-  padding-bottom: 5px;
+  padding: 10px 0px 10px;
+  border-top: 2px solid #ECBDB3;
 }
 .Bridesmaids img{
-  border-radius: 20px;
-  margin: 10px 0px;
+  display: block;
+  width: 200px;
+  margin: 10px auto;
 }
 .Bridesmaids p{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .7em;
+  font-size: 1em;
   text-align: center;
 }
 .Bridesmaids h3{
@@ -676,7 +690,7 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -688,20 +702,22 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.8em;
+  font-size: 2.3em;
   text-align: center;
-  padding-bottom: 5px;
+  padding: 10px 0px 10px;
+  border-top: 2px solid #ECBDB3;
 }
 .Groomsmen img{
-  border-radius: 20px;
-  margin: 10px 0px;
+  display: block;
+  width: 200px;
+  margin: 10px auto;
 }
 .Groomsmen p{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .7em;
+  font-size: 1em;
   text-align: center;
 }
 .Groomsmen h3{
@@ -709,7 +725,7 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -723,7 +739,7 @@ margin: 0px auto;
 /*Starts Registry Page*/
 #registry_header{
   height: 160px;
-  background-image: url(../img/REG_HEAD.PNG);
+  background-image: url(../img/REG_HEAD.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
 }
@@ -734,7 +750,7 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.3em;
+  font-size: 2.7em;
   text-align: center;
   padding-bottom: 15px;
 }
@@ -743,7 +759,7 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .8em;
+  font-size: 1em;
   text-align: center;
   line-height: 1.3em;
 }
@@ -798,7 +814,7 @@ margin: 0px auto;
 /*Starts RSVP PAGE*/
 #rsvp_header{
   height: 160px;
-  background-image: url(../img/RSVP_HEADER.png);
+  background-image: url(../img/RSVP_HEADER.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
 }
@@ -806,7 +822,7 @@ margin: 0px auto;
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.8em;
+  font-size: 2em;
   text-align: center;
   padding: 10px 10px 0px;
 }
@@ -816,7 +832,7 @@ margin: 0px auto;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .8em;
+  font-size: 1.2em;
   text-align: center;
   padding-top: 10px;
 }
@@ -881,8 +897,29 @@ input[type="text"], textarea {
 
 .radio-group {
   text-align: left;
-  display: inline-block;
   margin: 10px 0 15px;
+}
+
+/* Ensure radio options stay on a single horizontal line */
+#RSVP_PAGE .radio-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+/* Make radio inputs and their labels appear on the same line
+   and vertically centered within the RSVP page only. Hide
+   any stray <br> used in markup so labels don't break lines. */
+#RSVP_PAGE .radio-group input[type="radio"],
+#RSVP_PAGE .radio-group label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#RSVP_PAGE .radio-group br {
+  display: none;
 }
 
 #plus-one-group {
@@ -940,7 +977,7 @@ input[type="text"], textarea {
 /*Starts FAQ PAGE*/
 #FAQ_header{
   height: 160px;
-  background-image: url(../img/download.jpg);
+  background-image: url(../img/FAQ.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-size: cover; /* Scales the image to cover the entire container */
 }
@@ -976,7 +1013,7 @@ input[type="text"], textarea {
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: left;
 }
 
@@ -1042,7 +1079,7 @@ input[type="text"], textarea {
   font-weight: bold;
   font-style: normal;
   text-align: left;
-  font-size: .7em;
+  font-size: 1em;
   line-height: 1.3em;
 }
 /*Ends FAQ PAGE*/
@@ -1050,19 +1087,24 @@ input[type="text"], textarea {
 /*Starts Bentley Page*/
 #bentley_header{
   height: 160px;
-  background-image: url(../img/WHOISBENTLY.png);
+  background-image: url(../img/WHOISBENTLY.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: 0px 0px; /* Centers the image */
   background-size: cover; /* Scales the image to cover the entire container */
 }
 .aboutbentley{
-  margin:  15px 20px;
+  margin:  10px 20px;
+}
+.aboutbentley img{
+  display: block;
+  width: 200px;
+  margin: 10px auto;
 }
 .aboutbentley h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.3em;
+  font-size: 2.7em;
   text-align: center;
   padding-bottom: 15px;
 }
@@ -1071,21 +1113,19 @@ input[type="text"], textarea {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .8em;
+  font-size: 1em;
   text-align: center;
   line-height: 1.3em;
 }
 .bentleylikes{
   margin:  10px 0px;
 }
-.bentleylikes img{
-  border-radius: 30px;
-}
+
 .bentleylikes h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2em;
+  font-size: 2.2em;
   text-align: center;
   padding-bottom: 5px;
 }
@@ -1094,7 +1134,7 @@ input[type="text"], textarea {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .8em;
+  font-size: 1em;
   text-align: center;
   line-height: 1.3em;
 }

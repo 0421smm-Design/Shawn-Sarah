@@ -664,6 +664,9 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
 .weddingparty{
   margin:  10px 20px;
 }
+.mobile_only_br{
+  display: inline;
+  }
 .weddingparty h1{
   font-family: "Vidaloka", serif;
   font-weight: 400;
@@ -1220,19 +1223,23 @@ input[type="text"], textarea {
 /*Starts Media Queries*/
 
 /*Start Mobile Medium*/
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
+  .mobile_only_br{
+    display: none;
+  }
+
  
 
 
 }/*Ends Mobile Medium*/
 
 /*Start Tablet*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   
 }
 /*Ends Tablet*/
 
 /*Starts Laptop*/
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   
 }/*Ends Laptop*/

@@ -25,7 +25,6 @@ mrs-saint-delafield-regular {
 
 /*Stuff To Work On
 Footer link images made add some.
-Registry page buttons look odd when you click them.
 RSVP needs some fixing up centering and spacing.
 Add Cookie Request to RSVP page.
 */
@@ -653,7 +652,7 @@ margin: 0px auto;
   height: 160px;
   background-image: url(../img/Weddingpartyheader.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
-  background-position: 0px -20px; /* Centers the image */
+  background-position: 0px -10px; /* Centers the image */
   background-size: cover; /* Scales the image to cover the entire container */
 }
 
@@ -664,7 +663,7 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
 .weddingparty{
   margin:  10px 20px;
 }
-.mobile_only_br{
+.bridesmaids_mobile_only_br{
   display: inline;
   }
 .weddingparty h1{
@@ -745,6 +744,9 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
   text-align: center;
   line-height: 1.3em;
 }
+.groomsmen_mobile_only_br{
+  display: inline;
+  }
 .Groomsmen h3{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -793,6 +795,13 @@ text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
 /*ends wedding party page*/
 
 /*Starts schedule Page*/
+#schedule_header{
+  height: 160px;
+  background-image: url(../img/Schedule.jpg);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: 0px -45px; /* Centers the image */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
 .schedule_text{
 margin:  10px 20px;
 }
@@ -811,6 +820,16 @@ font-family: "Raleway", sans-serif;
   font-style: normal;
   font-size: 1em;
   text-align: center;
+  line-height: 1.3em;
+}
+
+.timeline{
+  max-height: 100%;
+  width: 90%
+  margin: 0px auto;
+  
+
+
 }
 
 /*ends schedule page*/
@@ -882,7 +901,7 @@ font-family: "Raleway", sans-serif;
 
 .registry_links a:hover{
   color: #ECBDB3;
-  padding: 10px 110px 10px;
+  padding: 10px 80px 10px;
 }
 /*Ends Registry Page*/
 

@@ -24,9 +24,36 @@ mrs-saint-delafield-regular {
 */
 
 /*Stuff To Work On
-Footer link images made add some.
-RSVP needs some fixing up centering and spacing.
-Add Cookie Request to RSVP page.
+- ALL Pages
+(Footer link images add some)
+
+-Home Page 
+(Good for now)
+
+-Wedding Party Page
+(•Add Images and names of People)
+
+-Schedule Page
+(•Update Actural Schedule and descriptions)
+
+-Venue Page
+(•Build Whole Page Out)
+
+–Registry Page
+(•Add Walamrt Link & any more stores if needed)
+
+-Photos Page
+(•Build Whole Page Out)
+
+-RSVP page
+(•RSVP needs some fixing up centering & spacing
+•Add Cookie Request to RSVP page)
+
+-FAQ Page
+(•Add Actual Questions & Answers)
+
+-Bentley Page
+(•Update page with more details)
 */
 
 
@@ -1185,7 +1212,7 @@ input[type="text"], textarea {
 /*Starts Bentley Page*/
 #bentley_header{
   height: 160px;
-  background-image: url(../img/WHOISBENTLY.jpg);
+  background-image: url(../img/bentley_header.jpg);
   background-repeat: no-repeat; /* Prevents the image from tiling */
   background-position: 0px 0px; /* Centers the image */
   background-size: cover; /* Scales the image to cover the entire container */

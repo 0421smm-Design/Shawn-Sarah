@@ -20,6 +20,7 @@
   window.GUESTS_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTDhkwIkE19YYLFuxNf5Q0zSvXPK0EyO_7_aXzQSo9IckmWMcxswrCUYBhfgm18VFJAcSulFqIQQrno/pub?output=csv";
   window.RSVP_POST_URL = "https://script.google.com/macros/s/AKfycbzRODAwQnTK8LIxcfxM_rUGUVjZxKURVvzp4T_Z47-27I7R2VqsCsAdV7to-anHCGFX/exec";
   window.RSVP_EMAIL_RECIPIENT = "0421smm@gmail.com";
+  window.COOKIE_POST_URL = "https://script.google.com/macros/s/AKfycbylHzQtTIV8bOzzjog74y6xwkK4o4B8bpveEq9mYHtkzR5k8Co9KymxWFthcwymCMBKmQ/exec";
 </script>
 </head>
 
@@ -80,14 +81,14 @@
       </div>
 
       <div id="plus-one-group" style="display: none;">
-        <label for="plus-one-name">Plus one name (optional)</label>
+        <label for="plus-one-name">Plus One Name (Optional)</label>
         <input type="text" id="plus-one-name" name="plus_one" placeholder="Name Please">
       </div>
 
-      <label for="guest-email">Email address for future updates</label>
+      <label for="guest-email">Email for Future Updates</label>
       <input type="email" id="guest-email" name="guest_email" placeholder="your@email.com" required autocomplete="email">
 
-      <label for="allergies">Any dietary restrictions or allergies?</label>
+      <label for="allergies">Dietary Restrictions or Allergies?</label>
       <textarea id="allergies" name="allergies" placeholder="e.g. Nut allergy, gluten-free, vegetarian..."></textarea>
 
       <button type="submit" id="submit-btn">Submit RSVP</button>
@@ -101,6 +102,28 @@
         <button type="button" id="rsvp-close-modal">Close</button>
       </div>
     </div>
+  </div>
+
+  <div class="tag rsvp-container cookie-container">
+    <h2>Cookie Request</h2>
+    <p>Want to be a part of our cookie table?
+      <br>let us know what kind of cookies you would like to bring! 
+      <br>Please fill out the form below.
+    </p>
+
+    <form id="cookie-form">
+      <label for="cookie-person-name">Your Name</label>
+      <input type="text" id="cookie-person-name" name="person_name" placeholder="Name Please" required autocomplete="name">
+
+      <label for="cookie-name">Name of the Cookies</label>
+      <input type="text" id="cookie-name" name="cookie_name" placeholder="Chocolate chip, snickerdoodle..." required>
+
+      <label for="cookie-allergies">Allergies</label>
+      <textarea id="cookie-allergies" name="cookie_allergies" placeholder="Please list any allergies, or write None."></textarea>
+
+      <button type="submit" id="cookie-submit-btn">Submit Cookies</button>
+      <p id="cookie-status" role="status" aria-live="polite"></p>
+    </form>
   </div>
 
 

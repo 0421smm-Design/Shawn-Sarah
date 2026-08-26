@@ -40,14 +40,13 @@ mrs-saint-delafield-regular {
 (•Build Whole Page Out)
 
 –Registry Page
-(•Add Walamrt Link & any more stores if needed)
+(Good for now)
 
 -Photos Page
 (•Build Whole Page Out)
 
 -RSVP page
-(•RSVP needs some fixing up centering & spacing
-•Add Cookie Request to RSVP page)
+(•RSVP & cookie requests need some fixing up centering & spacing)
 
 -FAQ Page
 (•Add Actual Questions & Answers)
@@ -854,9 +853,6 @@ font-family: "Raleway", sans-serif;
   max-height: 100%;
   width: 90%
   margin: 0px auto;
-  
-
-
 }
 
 /*ends schedule page*/
@@ -990,6 +986,21 @@ font-family: "Raleway", sans-serif;
   text-align: center;
 }
 
+ #error-msg {
+  color: red;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .8em;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#welcome-name{
+  font-size: 1.2em;
+}
+
 
 input[type="text"], textarea {
   width: 90%;
@@ -1095,6 +1106,32 @@ input[type="text"], textarea {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.cookie-container {
+ max-width: 500px;
+  margin: 20px 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cookie-container input[type="text"],
+.cookie-container textarea {
+  font-family: "Raleway", sans-serif;
+}
+
+.cookie-container p {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: .8em;
+  text-align: center;
+  line-height: 1.3em;
 }
 
 /*Ends RSVP Page*/

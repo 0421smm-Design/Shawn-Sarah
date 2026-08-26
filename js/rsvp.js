@@ -289,6 +289,69 @@ if (closeModalButton) {
   closeModalButton.addEventListener('click', hideSuccessModal);
 }
 
+const cookieForm = document.getElementById('cookie-form');
+const cookieStatus = document.getElementById('cookie-status');
+const cookiePostUrl = (window.COOKIE_POST_URL || '').trim();
+
+async function handleCookieSubmit(event) {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const payload = Object.fromEntries(data.entries());
+
+  try {
+    const submissionPayload = {
+      ...payload
+    };
+
+    if (!cookiePostUrl || cookiePostUrl.includes('PASTE_YOUR')) {
+      throw new Error('Cookie email endpoint is not configured yet.');
+    }
+
+    let sent = false;
+
+    try {
+      const response = await fetch(cookiePostUrl, {
+        method: 'POST',
+        mode: 'cors',
+        body: new URLSearchParams(submissionPayload)
+      });
+      const responseText = await response.text();
+      const responseJson = responseText ? JSON.parse(responseText) : null;
+      if (response.ok && (!responseJson || responseJson.ok !== false)) {
+        sent = true;
+      }
+    } catch (corsError) {
+      console.warn('Cookie request response could not be read:', corsError);
+    }
+
+    if (!sent) {
+      await fetch(cookiePostUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(submissionPayload)
+      });
+      sent = true;
+    }
+
+    if (!sent) {
+      throw new Error('Cookie request submission failed.');
+    }
+
+    cookieStatus.innerText = `Thanks, ${payload.person_name}! Your cookie request has been received.`;
+    cookieStatus.style.color = '#2d6a4f';
+    showSuccessModal(`Thanks, ${payload.person_name}! We’ve received your cookie request and will send it to Shawn and Sarah.`);
+    event.target.reset();
+  } catch (error) {
+    console.error('Cookie request submission failed:', error);
+    cookieStatus.innerText = 'Your cookie request could not be sent automatically right now. Please try again.';
+    cookieStatus.style.color = '#b22222';
+  }
+}
+
+if (cookieForm) {
+  cookieForm.addEventListener('submit', handleCookieSubmit);
+}
+
 document.getElementById('guest-search').addEventListener('keydown', event => {
   if (event.key === 'Enter') {
     event.preventDefault();

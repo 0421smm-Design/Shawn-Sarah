@@ -23,24 +23,26 @@ mrs-saint-delafield-regular {
 }
 */
 
+
+/*Stuff That Is Good
+-Home Page 
+(Good for now)
+–Registry Page
+(Good for now)
+*/
+
 /*Stuff To Work On
 - ALL Pages
 (Footer link images add some)
 
--Home Page 
-(Good for now)
-
 -Wedding Party Page
-(•Add Images and names of People)
+*Needs done at a later date (•Add Images and names of People)
 
 -Schedule Page
-(•Update Actural Schedule and descriptions)
+*Needs done at a later date (•Update Actural Schedule and descriptions)
 
 -Venue Page
 (•Build Whole Page Out)
-
-–Registry Page
-(Good for now)
 
 -Photos Page
 (•Build Whole Page Out)
@@ -49,10 +51,10 @@ mrs-saint-delafield-regular {
 (•RSVP & cookie requests need some fixing up centering & spacing)
 
 -FAQ Page
-(•Add Actual Questions & Answers)
+*Needs done at a later date (•Add Actual Questions & Answers)
 
 -Bentley Page
-(•Update page with more details)
+*Needs done at a later date (•Update page with more details)
 */
 
 
@@ -415,7 +417,7 @@ footer h1{
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: .6em;
+  font-size: .5em;
   padding-bottom: 15px;
 }
 #footernav ul{
@@ -425,8 +427,15 @@ footer h1{
   margin: 0px 5px;
 }
 
+#footernav wa-icon{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 5px;
+  
+}
+
 #footernav .weddingpartylink{
-width: 40px;
+width: 50px;
 }
 
 #footernav a:link, #footernav a:active, #footernav a:visited{

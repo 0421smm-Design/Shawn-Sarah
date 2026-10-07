@@ -29,11 +29,11 @@ mrs-saint-delafield-regular {
 (Good for now)
 –Registry Page
 (Good for now)
+- ALL Pages
+(Footer link images add some good for now)
 */
 
 /*Stuff To Work On
-- ALL Pages
-(Footer link images add some)
 
 -Wedding Party Page
 *Needs done at a later date (•Add Images and names of People)
@@ -865,6 +865,46 @@ font-family: "Raleway", sans-serif;
 }
 
 /*ends schedule page*/
+
+/*Starts venue Page*/
+#Venue_header{
+  height: 160px;
+  background-image: url(../img/LingrowFarms_Barn.jpg);
+  background-repeat: no-repeat; /* Prevents the image from tiling */
+  background-position: 0px -15px; /* Centers the image */
+  background-size: cover; /* Scales the image to cover the entire container */
+}
+
+.venue_text{
+  margin:  10px 20px;
+}
+
+.venue_text h1{
+  font-family: "Vidaloka", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.7em;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.venue_text p{
+font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+
+/*ends Venue*/
+
+
+
+
+
+
 
 /*Starts Registry Page*/
 #registry_header{
